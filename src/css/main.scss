@@ -1,1 +1,139 @@
-/* Your SCSS here. */
+/* reset */
+body, h1, h2, h3, p, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth; // enable the smooth scrolling
+}
+
+.stripe {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar {
+  position: sticky; //keep it sticky
+  top: 0;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+.navbar.shrink {
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.navbar a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.navbar a.active {
+  border-bottom: 2px solid yellow;
+}
+
+.hero {
+  min-height: 80vh;
+  text-align: center;
+}
+
+/* layout for our multi-columns */
+.multi-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.col {
+  padding: 10px;
+  background: #f2f2f2;
+  border-radius: 8px;
+}
+
+/* carousel */
+.carousel {
+  overflow: hidden;
+
+  .car-track {
+    display: flex;           
+    transition: transform .3s ease;
+  }
+
+  .slide { //create slide with good centering
+  min-width: 100%;       
+  height: 300px;         
+  display: flex;         
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;      
+  background: #333;
+  color: #fff; 
+}
+
+}
+/* background stripe */
+.stripe-fixed-bg {
+  background-image: url('../assets/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* modal with my projects*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.modal.show {
+  display: block;
+}
+.modal-backdrop {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.modal-body {
+  position: relative;
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 10px; right: 10px;
+  cursor: pointer;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  margin: 10px;
+  color: #333;
+}
+
+/* footer */
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* responsive tweaks to certiain vars */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+}

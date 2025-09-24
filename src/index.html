@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+  <!-- using fontawesome for the icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar stays at top -->
+  <header id="navBar" class="navbar">
+    <nav>
+      <a class="nav-link" href="#hero">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- first section with the centered text -->
+  <section id="hero" class="stripe hero">
+    <div>
+      <h1>Welcome!</h1>
+      <p>This is my portfolio</p>
+    </div>
+  </section>
+
+  <!-- about me multi column -->
+  <section id="about" class="stripe">
+    <h2>About Me</h2>
+    <div class="multi-col">
+      <div class="col">
+        <h3>Background</h3>
+        <p>Hi, I'm Daniel, a CS student at UIUC. I love using my technical and creative skills to build solutions that help the people and businesses around me. </p>
+      </div>
+      <div class="col">
+        <h3>Past Experience</h3>
+        <p>Internships: USAA (cloud/devops), Linen Labs (DB optimization + RAG systems). CMU (quantitative finance + big data analytics).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- carousel/slider portion -->
+  <section id="projects" class="stripe">
+    <h2>Projects</h2>
+    <div class="carousel">
+      <button class="car-btn left">&#10094;</button>
+      <div class="car-track">
+        <div class="slide">
+         <p> Notes AI: an AI-powered study platform that streamlines the learning process</p>
+        </div>
+        <div class="slide">
+           <p>Gambit Gallery: An online platform that lets players play poker and mahjong</p>
+        </div>
+        <div class="slide">
+          <p>Expense Tracker : A student app to keep track of budgets and expenses</p>
+        </div>
+      </div>
+      <button class="car-btn right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- background image -->
+  <section class="stripe stripe-fixed-bg center">
+    <h2 class="quote">"Imagine, Develop, Assist"</h2>
+  </section>
+
+  <!-- modal section -->
+  <section id="extra" class="stripe center">
+    <h2>More about me</h2>
+    <button id="openModal">Click me</button>
+  </section>
+  <div id="modal" class="modal">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-body">
+      <button class="close" data-close="true">&times;</button>
+      <h3>Random Facts</h3>
+      <p>I love  basketball, fashion, and hanging out with friends. You can close this window now!</p>
+    </div>
+  </div>
+
+  <!-- video section -->
+  <section id="media" class="stripe center">
+    <h2>My favorite animal:</h2>
+    <video controls width="400" poster="assets/thumbnail.jpg">
+      <source src="assets/IMG_8940.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- links / social icons -->
+  <section id="contact" class="stripe center">
+    <h2>My Socials/Links</h2>
+    <div class="social-icons">
+      <a href="https://github.com/danielcao888" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/daniel-cao-016a8427a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <p>Daniel Cao 2025</p>
+  </footer>
+
+</body>
 </html>
